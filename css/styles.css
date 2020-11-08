@@ -358,12 +358,12 @@ select::-ms-expand {
 }
 
 .checkbox {
-	font: 400 1.3rem "Open Sans", sans-serif;
+	font: 400 .8rem "Open Sans", sans-serif;
 }
 
 input[type='checkbox'] {
-	width:25px;
-    height:25px;
+	width:15px;
+    height:15px;
 	vertical-align: 0;
 	margin-right: 0.375rem;
 }
@@ -408,7 +408,7 @@ input[type='checkbox'] {
 
 .help-block.with-errors .list-unstyled {
 	color: #d2d4ce;
-	font-size: 1rem;
+	font-size: .8rem;
 	line-height: 1.125rem;
 	text-align: left;
 }
