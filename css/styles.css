@@ -53,7 +53,7 @@ html {
 }
 
 body, p {
-	color: #787976; 
+	color: #fff; 
 	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
 }
 
@@ -84,12 +84,12 @@ h1 {
 }
 
 h2 {
-	color: #484a46;
+	color: #14bf98;
 	font: 700 1.75rem/2.125rem "Montserrat", sans-serif;
 }
 
 h3 {
-	color: #484a46;
+	color:#fff;
 	font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
 }
 
@@ -109,7 +109,7 @@ h6 {
 }
 
 a {
-	color: #787976;
+	color: #14bf98;
 	text-decoration: underline;
 }
 
@@ -140,8 +140,8 @@ strong {
 }
 
 .section-title {
-	color: #14bf98;
-	font: 500 0.8125rem/1.125rem "Montserrat", sans-serif;
+	color: #fff;
+	font: 500 1.5rem "Montserrat", sans-serif;
 }
 
 .btn-solid-reg {
@@ -358,11 +358,13 @@ select::-ms-expand {
 }
 
 .checkbox {
-	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
+	font: 400 .8rem "Open Sans", sans-serif;
 }
 
 input[type='checkbox'] {
-	vertical-align: -15%;
+	width:15px;
+    height:15px;
+	vertical-align: 0;
 	margin-right: 0.375rem;
 }
 
@@ -405,8 +407,8 @@ input[type='checkbox'] {
 }
 
 .help-block.with-errors .list-unstyled {
-	color: #787976;
-	font-size: 0.75rem;
+	color: #d2d4ce;
+	font-size: .8rem;
 	line-height: 1.125rem;
 	text-align: left;
 }
@@ -823,7 +825,7 @@ input[type='checkbox'] {
 }
 
 .basic-1 .testimonial-author {
-	color: #484a46;
+	color: #14bf98;
 }
 
 /* Hover Animation */
@@ -898,7 +900,7 @@ input[type='checkbox'] {
 .cards-2 {
 	padding-top: 6.625rem;	
 	padding-bottom: 1.25rem;	
-	background-color: #fbfbfb;
+	background-color: #143f58;
 }
 
 .cards-2 .section-title {
@@ -1176,7 +1178,6 @@ input[type='checkbox'] {
 .slider {
 	padding-top: 6.375rem;
 	padding-bottom: 6.5rem;
-	background-color: #fbfbfb;
 }
 
 .slider h2 {
@@ -1236,7 +1237,7 @@ input[type='checkbox'] {
 }
 
 .slider .testimonial-author {
-	color: #484a46;
+	color: #14bf98;
 }
 
 
@@ -1492,7 +1493,7 @@ input[type='checkbox'] {
 .basic-2 {
 	padding-top: 6.375rem;
 	padding-bottom: 3.375rem;
-	background-color: #fbfbfb;
+	background-color: #143f58;
 	text-align: center;
 }
 
@@ -1532,7 +1533,7 @@ input[type='checkbox'] {
 
 .basic-2 .team-member .job-title {
 	margin-bottom: 0.75rem;
-	color: #484a46;
+	color: #14bf98;
 	font: 700 1rem/1.375rem "Montserrat", sans-serif;
 }
 
@@ -1641,7 +1642,7 @@ input[type='checkbox'] {
 .form-2 {
 	padding-top: 6.625rem;
 	padding-bottom: 5.625rem;
-	background-color: #fbfbfb;
+	background-color: #113448;
 }
 
 .form-2 .text-container {
