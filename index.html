@@ -1134,12 +1134,13 @@
           <!-- end of col -->
           <div class="col-lg-6">
             <!-- Contact Form -->
-            <form id="contactForm" data-toggle="validator" data-focus="false">
+            <form action="php/contactform-process.php" method="POST" id="contactForm" data-toggle="validator" data-focus="false">
               <div class="form-group">
                 <input
                   type="text"
                   class="form-control-input"
                   id="name"
+                  name="name"
                   required
                 />
                 <label class="label-control" for="name">Name</label>
@@ -1150,6 +1151,7 @@
                   type="email"
                   class="form-control-input"
                   id="email"
+                  name="email"
                   required
                 />
                 <label class="label-control" for="email">Email</label>
@@ -1159,6 +1161,7 @@
                 <textarea
                   class="form-control-textarea"
                   id="message"
+                  name="message"
                   required
                 ></textarea>
                 <label class="label-control" for="message">Your message</label>
@@ -1169,8 +1172,9 @@
                   type="checkbox"
                   id="terms"
                   value="Agreed-to-Terms"
+                  name="terms"
                   required
-                />I agree with UglyJig stated
+                />I agree with UglyJigs stated
                 <a href="privacy-policy.html">Privacy Policy</a> and
                 <a href="terms-conditions.html">Terms Conditions</a>
                 <div class="help-block with-errors"></div>
