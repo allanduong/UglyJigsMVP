@@ -1134,45 +1134,41 @@
           <!-- end of col -->
           <div class="col-lg-6">
             <!-- Contact Form -->
-            <form action="php/contactform-process.php" method="POST" id="contactForm" data-toggle="validator" data-focus="false">
+            <form id="contactForm" data-toggle="validator" data-focus="false">
               <div class="form-group">
                 <input
                   type="text"
                   class="form-control-input"
-                  id="name"
-                  name="name"
+                  id="cname"
                   required
                 />
-                <label class="label-control" for="name">Name</label>
+                <label class="label-control" for="cname">Name</label>
                 <div class="help-block with-errors"></div>
               </div>
               <div class="form-group">
                 <input
                   type="email"
                   class="form-control-input"
-                  id="email"
-                  name="email"
+                  id="cemail"
                   required
                 />
-                <label class="label-control" for="email">Email</label>
+                <label class="label-control" for="cemail">Email</label>
                 <div class="help-block with-errors"></div>
               </div>
               <div class="form-group">
                 <textarea
                   class="form-control-textarea"
-                  id="message"
-                  name="message"
+                  id="cmessage"
                   required
                 ></textarea>
-                <label class="label-control" for="message">Your message</label>
+                <label class="label-control" for="cmessage">Your message</label>
                 <div class="help-block with-errors"></div>
               </div>
               <div class="form-group checkbox">
                 <input
                   type="checkbox"
-                  id="terms"
+                  id="cterms"
                   value="Agreed-to-Terms"
-                  name="terms"
                   required
                 />I agree with UglyJigs stated
                 <a href="privacy-policy.html">Privacy Policy</a> and
@@ -1185,7 +1181,7 @@
                 </button>
               </div>
               <div class="form-message">
-                <div id="msgSubmit" class="h3 text-center hidden"></div>
+                <div id="cmsgSubmit" class="h3 text-center hidden"></div>
               </div>
             </form>
             <!-- end of contact form -->
