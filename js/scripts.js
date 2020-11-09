@@ -126,38 +126,38 @@
   });
 
   /* Counter - CountTo */
-  var a = 0;
-  $(window).scroll(function () {
-    if ($("#counter").length) {
-      // checking if CountTo section exists in the page, if not it will not run the script and avoid errors
-      var oTop = $("#counter").offset().top - window.innerHeight;
-      if (a == 0 && $(window).scrollTop() > oTop) {
-        $(".counter-value").each(function () {
-          var $this = $(this),
-            countTo = $this.attr("data-count");
-          $({
-            countNum: $this.text(),
-          }).animate(
-            {
-              countNum: countTo,
-            },
-            {
-              duration: 2000,
-              easing: "swing",
-              step: function () {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function () {
-                $this.text(this.countNum);
-                //alert('finished');
-              },
-            }
-          );
-        });
-        a = 1;
-      }
-    }
-  });
+  // var a = 0;
+  // $(window).scroll(function () {
+  //   if ($("#counter").length) {
+  //     // checking if CountTo section exists in the page, if not it will not run the script and avoid errors
+  //     var oTop = $("#counter").offset().top - window.innerHeight;
+  //     if (a == 0 && $(window).scrollTop() > oTop) {
+  //       $(".counter-value").each(function () {
+  //         var $this = $(this),
+  //           countTo = $this.attr("data-count");
+  //         $({
+  //           countNum: $this.text(),
+  //         }).animate(
+  //           {
+  //             countNum: countTo,
+  //           },
+  //           {
+  //             duration: 2000,
+  //             easing: "swing",
+  //             step: function () {
+  //               $this.text(Math.floor(this.countNum));
+  //             },
+  //             complete: function () {
+  //               $this.text(this.countNum);
+  //               //alert('finished');
+  //             },
+  //           }
+  //         );
+  //       });
+  //       a = 1;
+  //     }
+  //   }
+  // });
 
   /* Move Form Fields Label When User Types */
   // for input and textarea fields
@@ -242,49 +242,49 @@
   }
 
   /* Privacy Form */
-  $("#privacyForm")
-    .validator()
-    .on("submit", function (event) {
-      if (event.isDefaultPrevented()) {
-        // handle the invalid form...
-        pformError();
-        psubmitMSG(false, "Please fill all fields!");
-      } else {
-        // everything looks good!
-        event.preventDefault();
-        psubmitForm();
-      }
-    });
+  // $("#privacyForm")
+  //   .validator()
+  //   .on("submit", function (event) {
+  //     if (event.isDefaultPrevented()) {
+  //       // handle the invalid form...
+  //       pformError();
+  //       psubmitMSG(false, "Please fill all fields!");
+  //     } else {
+  //       // everything looks good!
+  //       event.preventDefault();
+  //       psubmitForm();
+  //     }
+  //   });
 
-  function psubmitForm() {
-    // initiate variables with form content
-    var name = $("#pname").val();
-    var email = $("#pemail").val();
-    var select = $("#pselect").val();
-    var terms = $("#pterms").val();
+  // function psubmitForm() {
+  //   // initiate variables with form content
+  //   var name = $("#pname").val();
+  //   var email = $("#pemail").val();
+  //   var select = $("#pselect").val();
+  //   var terms = $("#pterms").val();
 
-    $.ajax({
-      type: "POST",
-      url: "php/privacyform-process.php",
-      data:
-        "name=" +
-        name +
-        "&email=" +
-        email +
-        "&select=" +
-        select +
-        "&terms=" +
-        terms,
-      success: function (text) {
-        if (text == "success") {
-          pformSuccess();
-        } else {
-          pformError();
-          psubmitMSG(false, text);
-        }
-      },
-    });
-  }
+  //   $.ajax({
+  //     type: "POST",
+  //     url: "php/privacyform-process.php",
+  //     data:
+  //       "name=" +
+  //       name +
+  //       "&email=" +
+  //       email +
+  //       "&select=" +
+  //       select +
+  //       "&terms=" +
+  //       terms,
+  //     success: function (text) {
+  //       if (text == "success") {
+  //         pformSuccess();
+  //       } else {
+  //         pformError();
+  //         psubmitMSG(false, text);
+  //       }
+  //     },
+  //   });
+  // }
 
   function pformSuccess() {
     $("#privacyForm")[0].reset();
