@@ -192,7 +192,7 @@
     var terms = $("#cterms").val();
     $.ajax({
       type: "POST",
-      url: "php/contactform-process.php",
+      url: "/php/contactform-process.php",
       data:
         "name=" +
         name +
@@ -286,32 +286,32 @@
   //   });
   // }
 
-  function pformSuccess() {
-    $("#privacyForm")[0].reset();
-    psubmitMSG(true, "Request Submitted!");
-    $("input").removeClass("notEmpty"); // resets the field label after submission
-  }
+  // function pformSuccess() {
+  //   $("#privacyForm")[0].reset();
+  //   psubmitMSG(true, "Request Submitted!");
+  //   $("input").removeClass("notEmpty"); // resets the field label after submission
+  // }
 
-  function pformError() {
-    $("#privacyForm")
-      .removeClass()
-      .addClass("shake animated")
-      .one(
-        "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-        function () {
-          $(this).removeClass();
-        }
-      );
-  }
+  // function pformError() {
+  //   $("#privacyForm")
+  //     .removeClass()
+  //     .addClass("shake animated")
+  //     .one(
+  //       "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+  //       function () {
+  //         $(this).removeClass();
+  //       }
+  //     );
+  // }
 
-  function psubmitMSG(valid, msg) {
-    if (valid) {
-      var msgClasses = "h3 text-center tada animated";
-    } else {
-      var msgClasses = "h3 text-center";
-    }
-    $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-  }
+  // function psubmitMSG(valid, msg) {
+  //   if (valid) {
+  //     var msgClasses = "h3 text-center tada animated";
+  //   } else {
+  //     var msgClasses = "h3 text-center";
+  //   }
+  //   $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
+  // }
 
   /* Back To Top Button */
   // create the back to top button
