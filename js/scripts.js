@@ -125,40 +125,6 @@
     });
   });
 
-  /* Counter - CountTo */
-  // var a = 0;
-  // $(window).scroll(function () {
-  //   if ($("#counter").length) {
-  //     // checking if CountTo section exists in the page, if not it will not run the script and avoid errors
-  //     var oTop = $("#counter").offset().top - window.innerHeight;
-  //     if (a == 0 && $(window).scrollTop() > oTop) {
-  //       $(".counter-value").each(function () {
-  //         var $this = $(this),
-  //           countTo = $this.attr("data-count");
-  //         $({
-  //           countNum: $this.text(),
-  //         }).animate(
-  //           {
-  //             countNum: countTo,
-  //           },
-  //           {
-  //             duration: 2000,
-  //             easing: "swing",
-  //             step: function () {
-  //               $this.text(Math.floor(this.countNum));
-  //             },
-  //             complete: function () {
-  //               $this.text(this.countNum);
-  //               //alert('finished');
-  //             },
-  //           }
-  //         );
-  //       });
-  //       a = 1;
-  //     }
-  //   }
-  // });
-
   /* Move Form Fields Label When User Types */
   // for input and textarea fields
   $("input, textarea").keyup(function () {
@@ -191,7 +157,7 @@
     var message = $("#cmessage").val();
     var terms = $("#cterms").val();
     $.ajax({
-      url: "contactform.php",
+      url: "php/contactform.php",
       method: "POST",
       data:
         "name=" +
@@ -240,78 +206,6 @@
     }
     $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
   }
-
-  /* Privacy Form */
-  // $("#privacyForm")
-  //   .validator()
-  //   .on("submit", function (event) {
-  //     if (event.isDefaultPrevented()) {
-  //       // handle the invalid form...
-  //       pformError();
-  //       psubmitMSG(false, "Please fill all fields!");
-  //     } else {
-  //       // everything looks good!
-  //       event.preventDefault();
-  //       psubmitForm();
-  //     }
-  //   });
-
-  // function psubmitForm() {
-  //   // initiate variables with form content
-  //   var name = $("#pname").val();
-  //   var email = $("#pemail").val();
-  //   var select = $("#pselect").val();
-  //   var terms = $("#pterms").val();
-
-  //   $.ajax({
-  //     type: "POST",
-  //     url: "php/privacyform-process.php",
-  //     data:
-  //       "name=" +
-  //       name +
-  //       "&email=" +
-  //       email +
-  //       "&select=" +
-  //       select +
-  //       "&terms=" +
-  //       terms,
-  //     success: function (text) {
-  //       if (text == "success") {
-  //         pformSuccess();
-  //       } else {
-  //         pformError();
-  //         psubmitMSG(false, text);
-  //       }
-  //     },
-  //   });
-  // }
-
-  // function pformSuccess() {
-  //   $("#privacyForm")[0].reset();
-  //   psubmitMSG(true, "Request Submitted!");
-  //   $("input").removeClass("notEmpty"); // resets the field label after submission
-  // }
-
-  // function pformError() {
-  //   $("#privacyForm")
-  //     .removeClass()
-  //     .addClass("shake animated")
-  //     .one(
-  //       "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-  //       function () {
-  //         $(this).removeClass();
-  //       }
-  //     );
-  // }
-
-  // function psubmitMSG(valid, msg) {
-  //   if (valid) {
-  //     var msgClasses = "h3 text-center tada animated";
-  //   } else {
-  //     var msgClasses = "h3 text-center";
-  //   }
-  //   $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-  // }
 
   /* Back To Top Button */
   // create the back to top button
